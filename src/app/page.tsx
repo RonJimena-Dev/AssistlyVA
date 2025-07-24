@@ -1,73 +1,153 @@
 import Image from "next/image";
-import { FaBolt, FaEnvelopeOpenText, FaCalendarCheck, FaChartLine } from "react-icons/fa";
+import { FaBolt, FaEnvelopeOpenText, FaCalendarCheck, FaChartLine, FaUserTie, FaCogs, FaLaptopCode, FaRegBuilding } from "react-icons/fa";
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center min-h-[80vh] bg-gradient-to-br from-[var(--primary)]/5 to-[var(--secondary)]/10 py-16 px-4 text-center shadow-lg rounded-xl mx-auto max-w-2xl mt-8 animate-fade-in">
+      {/* Hero Section with Parallax Logo */}
+      <section className="relative flex flex-col items-center justify-center min-h-[80vh] py-10 px-4 text-center" style={{ background: '#F7F5F2' }}>
+
+        {/* Logo centered above brand name, no background overlays/parallax */}
         <Image
-          src="/logo.jpeg"
-          alt="Assistly VA Logo"
-          width={120}
-          height={120}
+          src="/Logo.JPG"
+          alt="OpsAlpha Logo"
+          width={320}
+          height={320}
+          className="mb-6 animate-fade-in"
           priority
-          className="mx-auto mb-6 rounded-full shadow-md animate-pop-in"
         />
-        <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--secondary)] mb-4 tracking-tight animate-slide-in-up">
-  Delegate Smarter. Build Faster.
-</h1>
-<p className="text-xl md:text-2xl text-gray-800 mb-8 animate-fade-in delay-100">
-  From inbox wrangling to CRM sorcery — we handle the grind, you grow the biz.
-</p>
-        <a
-          href="#plans"
-          className="inline-block px-10 py-4 bg-[var(--primary)] text-white text-xl font-bold rounded-full shadow-lg hover:bg-[var(--secondary)] transition active:scale-95 animate-pop-in"
-        >
-          Let’s Work
-        </a>
+        <div className="relative z-10 flex flex-col items-center max-w-2xl w-full mx-auto">
+          <h1 className="text-6xl md:text-7xl font-black mb-3" style={{ color: '#26221A', letterSpacing: '-0.04em', fontFamily: 'Poppins, Inter, Arial, sans-serif' }}>
+            OpsAlpha VA
+          </h1>
+          <p className="text-lg md:text-xl font-semibold mb-8" style={{ color: '#8D7B5A', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
+            Empowering Professionals. Elevating Businesses. Every Day.
+          </p>
+
+          <a
+            href="#contact"
+            className="inline-block px-10 py-4 bg-[#1C2331] text-white text-xl font-bold rounded-full shadow-lg hover:bg-[#0F172A] hover:text-[#E4E7EF] border-2 border-[#3A4256] transition active:scale-95 animate-pop-in"
+          >
+            Book a Discovery Call
+          </a>
+        </div>
       </section>
 
-      {/* Plans Section */}
-      <section
-        id="plans"
-        className="w-full max-w-5xl mx-auto py-16 px-4 flex flex-col items-center animate-fade-in delay-200"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold text-[var(--secondary)] mb-8 text-center flex items-center gap-2 animate-slide-in-up">
-          <FaBolt className="inline text-[var(--primary)]" /> Choose Your Plan
-        </h2>
-        <div className="flex flex-col md:flex-row gap-8 w-full justify-center items-stretch">
-          {/* Full-Time Plan Card */}
-          <div className="flex-1 bg-white rounded-2xl shadow-xl p-8 border-t-8 border-[var(--primary)] flex flex-col items-center transition hover:scale-105 hover:shadow-2xl animate-pop-in">
-            <h3 className="text-2xl font-bold text-[var(--secondary)] mb-2 flex items-center gap-2">
-              <FaCalendarCheck className="text-[var(--primary)]" /> Full-Time
-            </h3>
-            <div className="text-4xl font-extrabold text-[var(--primary)] mb-1">$9<span className="text-lg font-medium">/hr</span></div>
-            <div className="text-gray-500 mb-4">40 hrs/week · 160 hrs/month</div>
-            <ul className="text-gray-700 text-left mb-6 space-y-2 w-full max-w-xs">
-              <li>✔ Dedicated VA, always on it</li>
-              <li>✔ Calls, inbox, and calendar wrangling</li>
-              <li>✔ Daily updates in your DMs</li>
-              <li>✔ Admin, light social & more</li>
-            </ul>
-            <div className="text-lg font-semibold text-gray-800 mb-2">Total: $1,440/month</div>
-            <button className="mt-auto px-6 py-2 bg-[var(--primary)] text-white rounded-full font-bold shadow hover:bg-[var(--secondary)] transition">Book a Free Chat</button>
+      {/* About Section */}
+      <section className="w-full max-w-3xl mx-auto py-12 px-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1C2331] mb-4 animate-fade-in">About OpsAlpha</h2>
+        <p className="text-lg md:text-xl text-[#3A4256] mb-6 animate-slide-in-up">
+          OpsAlpha is a high-performance operations and virtual assistant agency built for founders, consultants, and business leaders. We provide executive-level support, Salesforce administration, and operational systems design — so you can scale with confidence.
+        </p>
+      </section>
+
+      {/* Services Section */}
+      <section className="w-full max-w-6xl mx-auto py-12 px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1C2331] mb-8 text-center animate-fade-in">Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Virtual Executive Assistance */}
+          <div className="bg-white/90 rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-1 transition group animate-slide-in-up">
+            <FaUserTie className="text-4xl text-[#1C2331] mb-3 group-hover:text-[#2E5AAC] transition" />
+            <h3 className="text-xl font-semibold text-[#1C2331] mb-2">Virtual Executive Assistance</h3>
+            <p className="text-[#3A4256] text-sm">Inbox, calendar, travel, research & high-touch support for leaders who need leverage.</p>
           </div>
-          {/* Part-Time Plan Card */}
-          <div className="flex-1 bg-white rounded-2xl shadow-xl p-8 border-t-8 border-[var(--secondary)] flex flex-col items-center transition hover:scale-105 hover:shadow-2xl animate-pop-in delay-100">
-            <h3 className="text-2xl font-bold text-[var(--secondary)] mb-2 flex items-center gap-2">
-              <FaEnvelopeOpenText className="text-[var(--secondary)]" /> Part-Time
-            </h3>
-            <div className="text-4xl font-extrabold text-[var(--primary)] mb-1">$10<span className="text-lg font-medium">/hr</span></div>
-            <div className="text-gray-500 mb-4">20 hrs/week · 80 hrs/month</div>
-            <ul className="text-gray-700 text-left mb-6 space-y-2 w-full max-w-xs">
-              <li>✔ Phone, CRM & calendar magic</li>
-              <li>✔ Quick updates, zero drama</li>
-              <li>✔ Flexible onboarding</li>
-            </ul>
-            <div className="text-lg font-semibold text-gray-800 mb-2">Total: $800/month</div>
-            <button className="mt-auto px-6 py-2 bg-[var(--secondary)] text-white rounded-full font-bold shadow hover:bg-[var(--primary)] transition">Book a Free Chat</button>
+          {/* Salesforce Admin & Optimization */}
+          <div className="bg-white/90 rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-1 transition group animate-slide-in-up delay-100">
+            <FaCogs className="text-4xl text-[#2E5AAC] mb-3 group-hover:text-[#1C2331] transition" />
+            <h3 className="text-xl font-semibold text-[#1C2331] mb-2">Salesforce Admin & Optimization</h3>
+            <p className="text-[#3A4256] text-sm">Certified Salesforce administration, automation, reporting & CRM optimization for your business.</p>
           </div>
+          {/* Project-Based Web Development */}
+          <div className="bg-white/90 rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-1 transition group animate-slide-in-up delay-200">
+            <FaLaptopCode className="text-4xl text-[#1C2331] mb-3 group-hover:text-[#2E5AAC] transition" />
+            <h3 className="text-xl font-semibold text-[#1C2331] mb-2">Project-Based Web Development</h3>
+            <p className="text-[#3A4256] text-sm">Websites, dashboards, automations & integrations built for operational efficiency.</p>
+          </div>
+          {/* Admin & Back Office Solutions */}
+          <div className="bg-white/90 rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-1 transition group animate-slide-in-up delay-300">
+            <FaRegBuilding className="text-4xl text-[#2E5AAC] mb-3 group-hover:text-[#1C2331] transition" />
+            <h3 className="text-xl font-semibold text-[#1C2331] mb-2">Admin & Back Office Solutions</h3>
+            <p className="text-[#3A4256] text-sm">Billing, docs, HR, research, process & admin handled with precision and care.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why OpsAlpha Section */}
+      <section className="w-full max-w-4xl mx-auto py-12 px-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1C2331] mb-6 animate-fade-in">Why OpsAlpha?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-white/80 rounded-xl shadow p-6 animate-slide-in-up">
+            <h4 className="text-lg font-bold text-[#2E5AAC] mb-2">Operator-level mindset, not task-takers</h4>
+            <p className="text-[#3A4256] text-sm">We think like owners and act with initiative—delivering outcomes, not just tasks.</p>
+          </div>
+          <div className="bg-white/80 rounded-xl shadow p-6 animate-slide-in-up delay-100">
+            <h4 className="text-lg font-bold text-[#2E5AAC] mb-2">Fluent in high-performance tools & platforms</h4>
+            <p className="text-[#3A4256] text-sm">From Salesforce to Notion, we’re power users who help you get the most from your stack.</p>
+          </div>
+          <div className="bg-white/80 rounded-xl shadow p-6 animate-slide-in-up delay-200">
+            <h4 className="text-lg font-bold text-[#2E5AAC] mb-2">Trusted by leaders across industries</h4>
+            <p className="text-[#3A4256] text-sm">Startups, consultants, and established businesses trust us to run their ops with excellence.</p>
+          </div>
+          <div className="bg-white/80 rounded-xl shadow p-6 animate-slide-in-up delay-300">
+            <h4 className="text-lg font-bold text-[#2E5AAC] mb-2">Systems-driven. Outcome-focused.</h4>
+            <p className="text-[#3A4256] text-sm">We design, document, and optimize systems—so you can scale with confidence.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Insight (Optional) */}
+      <section className="w-full max-w-3xl mx-auto py-8 px-4 flex flex-col items-center text-center">
+        <div className="flex flex-col items-center gap-4 animate-fade-in">
+          <Image
+            src="/vercel.svg"
+            alt="Founder Headshot"
+            width={80}
+            height={80}
+            className="rounded-full border-2 border-[#2E5AAC] shadow-lg mb-2"
+          />
+          <blockquote className="italic text-[#3A4256] text-lg md:text-xl max-w-xl">
+            “OpsAlpha was built to empower leaders and teams to scale—without the operational drag. We’re your leverage, your operator, your edge.”
+          </blockquote>
+          <span className="font-bold text-[#1C2331] mt-2">Alex Founder, OpsAlpha VA</span>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="w-full max-w-2xl mx-auto py-12 px-4 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1C2331] mb-4 animate-fade-in">Ready to delegate with confidence?</h2>
+        <p className="text-lg text-[#3A4256] mb-8 animate-slide-in-up">Let’s build your operational advantage.</p>
+        <form className="flex flex-col gap-4 items-center bg-white rounded-xl shadow-lg p-8 mx-auto animate-slide-in-up border border-[#8D7B5A]" action="#" method="POST">
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="Your Name"
+            className="w-full max-w-xs px-4 py-2 rounded border border-[#8D7B5A] focus:border-[#2E5AAC] outline-none text-[#26221A] font-semibold placeholder-[#8D7B5A] bg-white shadow-sm"
+          />
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Your Email"
+            className="w-full max-w-xs px-4 py-2 rounded border border-[#8D7B5A] focus:border-[#2E5AAC] outline-none text-[#26221A] font-semibold placeholder-[#8D7B5A] bg-white shadow-sm"
+          />
+          <textarea
+            name="message"
+            required
+            placeholder="How can we help you?"
+            className="w-full max-w-xs px-4 py-2 rounded border border-[#8D7B5A] focus:border-[#2E5AAC] outline-none text-[#26221A] font-semibold placeholder-[#8D7B5A] bg-white shadow-sm"
+            rows={4}
+          />
+          <button
+            type="submit"
+            className="mt-2 px-8 py-3 bg-[#2E5AAC] text-white font-bold rounded-full shadow hover:bg-[#1C2331] transition border border-[#8D7B5A]"
+          >
+            Send Message
+          </button>
+        </form>
+        <div className="mt-8 text-sm text-[#6B7280] animate-fade-in">
+          <p>“Great team—highly recommend for founders who want to scale!”</p>
+          <p className="mt-2">— Satisfied Client</p>
         </div>
       </section>
     </>

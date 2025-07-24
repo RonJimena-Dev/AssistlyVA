@@ -3,16 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --primary: #1fb6ff;
-  --secondary: #009ca6;
-  --accent: #38bdf8;
-  --background: #f8fafc;
-  --foreground: #0f172a;
+  --primary: #181818; /* Black */
+  --secondary: #d6bfa7; /* Muted Beige/Light Brown */
+  --accent: #bca890; /* Slightly deeper beige for accents */
+  --background: #fff; /* White */
+  --foreground: #232323; /* Soft dark gray for text */
 }
 
 body {
   @apply bg-[var(--background)] text-[var(--foreground)] font-sans antialiased;
 }
+
+.logo-watermark-bg {
+  background-image: url('/logo.jpeg');
+  background-size: 60vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: opacity(0.08);
+  z-index: 0;
+}
+
+
 
 a {
   @apply text-[var(--primary)] hover:underline;
