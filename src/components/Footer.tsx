@@ -13,16 +13,16 @@ const Footer = () => {
             <h3 className={styles.brandName}>OpsAlpha VA</h3>
             <p className={styles.tagline}>Empowering Professionals. Elevating Businesses. Every Day.</p>
             <div className={styles.socialLinks}>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/1AxiMU462s/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebook className={styles.socialIcon} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://www.instagram.com/opsalpha.va?igsh=MXB1ZzFncHB4bGNrNQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram className={styles.socialIcon} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={styles.disabledLink}>
                 <FaLinkedin className={styles.socialIcon} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className={styles.disabledLink}>
                 <FaTwitter className={styles.socialIcon} />
               </a>
               <a href="mailto:opsalphava@gmail.com" aria-label="Email">

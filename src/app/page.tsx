@@ -91,7 +91,7 @@ export default function Home() {
                 <FaCogs className="text-2xl text-[#2E5AAC]" />
               </div>
               <h4 className="text-lg font-bold text-[#1C2331] mb-2">Fluent in Modern Tools</h4>
-              <p className="text-[#3A4256] text-sm">From Salesforce to Notion, we're power users who help you get the most from your stack.</p>
+              <p className="text-[#3A4256] text-sm">From Salesforce to Notion, we&apos;re power users who help you get the most from your stack.</p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 text-left animate-slide-in-up" style={{ animationDelay: '200ms' }}>
               <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">

@@ -10,7 +10,7 @@ const AboutSection = () => {
           <h2 className={styles.title}>Your Strategic Operations Partner</h2>
           <p className={styles.description}>
             OpsAlpha is a hand-picked team of trained virtual assistants helping founders, startups, and consultants scale without burnout. 
-            With systemized workflows, AI tools, and personalized service — we don't just assist, we optimize.
+            With systemized workflows, AI tools, and personalized service — we don&apos;t just assist, we optimize.
           </p>
           
           <div className={styles.skillsGrid}>
@@ -35,7 +35,7 @@ const AboutSection = () => {
                 <FaSearch />
               </div>
               <h3>Research & Presentation Support</h3>
-              <p>Give us the topic, we'll deliver insights.</p>
+              <p>Give us the topic, we&apos;ll deliver insights.</p>
             </div>
           </div>
         </div>

@@ -43,11 +43,22 @@
 .socialIcon {
   font-size: 1.25rem;
   color: #94A3B8;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .socialIcon:hover {
   color: #2E5AAC;
+  transform: translateY(-2px);
+}
+
+.disabledLink .socialIcon {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.disabledLink .socialIcon:hover {
+  color: #94A3B8;
+  transform: none;
 }
 
 .footerLinks {
