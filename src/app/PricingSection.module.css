@@ -53,9 +53,9 @@
 .startsAtLabel {
   font-size: 0.9rem;
   color: #64748B;
-  margin-bottom: -0.5rem;
   text-align: center;
-  font-style: italic;
+  margin-bottom: 0.25rem;
+  opacity: 0.9;
 }
 
 .pricingCard:hover {
@@ -102,23 +102,33 @@
 }
 
 .price {
+  margin: 1.5rem 0;
+}
+
+.priceContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem 0;
 }
 
-.amount {
+.priceAmount {
   font-size: 3rem;
   font-weight: 700;
   color: #1C2331;
   line-height: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.25rem;
 }
+
+
 
 .duration {
   font-size: 1rem;
   color: #64748B;
-  margin-left: 0.25rem;
+  margin-bottom: 0.1rem;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .description {

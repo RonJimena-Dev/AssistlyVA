@@ -22,17 +22,15 @@ const PricingSection = () => {
         <div className={styles.pricingGrid}>
           {/* Part Time Plan */}
           <div className={styles.pricingCard}>
-            <div className={styles.startsAtLabel}>Starts at</div>
             <div className={styles.popularBadge}>
               <FaStar /> Most Flexible
             </div>
             <div className={styles.planHeader}>
               <h3>Part Time</h3>
               <div className={styles.price}>
-                <span className={styles.startsAtLabel}>Starts at</span>
-                <div className={styles.priceRow}>
-                  <span className={styles.amount}>$10</span>
-                  <span className={styles.duration}>/hour</span>
+                <div className={styles.priceContent}>
+                  <div className={styles.startsAtLabel}>Starts at</div>
+                  <div className={styles.priceAmount}>$10<span className={styles.duration}>/hour</span></div>
                 </div>
               </div>
               <p className={styles.description}>Perfect for growing businesses with variable needs</p>
@@ -68,10 +66,9 @@ const PricingSection = () => {
             <div className={styles.planHeader}>
               <h3>Full Time</h3>
               <div className={styles.price}>
-                <span className={styles.startsAtLabel}>Starts at</span>
-                <div className={styles.priceRow}>
-                  <span className={styles.amount}>$8</span>
-                  <span className={styles.duration}>/hour</span>
+                <div className={styles.priceContent}>
+                  <div className={styles.startsAtLabel}>Starts at</div>
+                  <div className={styles.priceAmount}>$8<span className={styles.duration}>/hour</span></div>
                 </div>
               </div>
               <p className={styles.description}>Ideal for established businesses with consistent needs</p>
