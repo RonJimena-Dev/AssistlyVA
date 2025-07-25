@@ -133,37 +133,41 @@ a.secondary {
   animation: pop-in 0.7s cubic-bezier(0.4,0,0.2,1) both;
 }
 
-.discovery-btn {
-  display: inline-block;
-  padding: 1rem 2.5rem;
+.cta-wrapper {
+  position: relative;
+  height: 80px; /* Adjust to your button height + margin */
+}
+
+.cta-btn {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
   background: #1C2331;
   color: #fff;
-  font-size: 1.25rem;
-  font-weight: bold;
+  border: none;
   border-radius: 999px;
-  border: 2px solid #3A4256;
-  box-shadow: 0 2px 12px 0 rgba(44,54,94,0.08);
-  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
-  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
   z-index: 10;
-  opacity: 1;
+  font-weight: bold;
+  box-shadow: 0 2px 12px 0 rgba(44,54,94,0.08);
 }
-.discovery-btn:hover {
-  background: #0F172A;
-  color: #E4E7EF;
-}
-.discovery-btn.sticky {
+.cta-btn.sticky {
   position: fixed;
-  left: 50%;
   top: 10px;
+  left: 50%;
   transform: translateX(-50%) scale(0.95);
   box-shadow: 0 8px 32px 0 rgba(46,90,172,0.14), 0 1.5px 6px 0 rgba(28,35,49,0.08);
-  opacity: 0.97;
-  pointer-events: auto;
-  animation: fade-in 0.4s;
+  opacity: 0.95;
 }
 @media (max-width: 600px) {
-  .discovery-btn, .discovery-btn.sticky {
+  .cta-wrapper {
+    height: 60px;
+  }
+  .cta-btn, .cta-btn.sticky {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
     top: 8px;
@@ -171,6 +175,7 @@ a.secondary {
     width: auto;
   }
 }
+
 
 :root {
   --primary: #1C2331;

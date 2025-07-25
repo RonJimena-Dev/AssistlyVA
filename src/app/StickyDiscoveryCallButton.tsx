@@ -2,27 +2,34 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function StickyDiscoveryCallButton() {
-  const btnRef = useRef<HTMLAnchorElement>(null);
+  const btnRef = useRef<HTMLButtonElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!btnRef.current) return;
-      const rect = btnRef.current.getBoundingClientRect();
-      // If button is above the viewport top, make sticky
-      setIsSticky(rect.top < 10);
+      if (!btnRef.current || !wrapperRef.current) return;
+      const stickyOffset = wrapperRef.current.getBoundingClientRect().top + window.scrollY;
+      if (window.scrollY > stickyOffset) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <a
-      ref={btnRef}
-      href="#contact"
-      className={`discovery-btn${isSticky ? " sticky" : ""}`}
-    >
-      Book a Discovery Call
-    </a>
+    <div className="cta-wrapper" ref={wrapperRef}>
+      <button
+        id="stickyBtn"
+        ref={btnRef}
+        className={`cta-btn${isSticky ? " sticky" : ""}`}
+      >
+        Book a Discovery Call
+      </button>
+    </div>
   );
 }
+
