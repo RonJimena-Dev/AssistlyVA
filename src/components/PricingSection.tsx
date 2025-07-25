@@ -22,6 +22,7 @@ const PricingSection = () => {
         <div className={styles.pricingGrid}>
           {/* Part Time Plan */}
           <div className={styles.pricingCard}>
+            <div className={styles.startsAtLabel}>Starts at</div>
             <div className={styles.popularBadge}>
               <FaStar /> Most Flexible
             </div>
@@ -57,6 +58,7 @@ const PricingSection = () => {
 
           {/* Full Time Plan */}
           <div className={`${styles.pricingCard} ${styles.featured}`}>
+            <div className={styles.startsAtLabel}>Starts at</div>
             <div className={styles.popularBadge}>
               <FaStar /> Best Value
             </div>
