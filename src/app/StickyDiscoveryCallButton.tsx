@@ -25,7 +25,7 @@ export default function StickyDiscoveryCallButton() {
     <div className={styles.ctaWrapper} ref={wrapperRef}>
       <button 
         className={`${styles.ctaButton} ${isSticky ? styles.sticky : ''}`}
-        onClick={() => window.open('https://calendly.com/opsalpha/discovery-call', '_blank')}
+        onClick={() => window.open('https://calendly.com/opsalphava/discovery-call', '_blank')}
       >
         Book Discovery Call
       </button>
