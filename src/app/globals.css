@@ -2,67 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary: #2E5AAC; /* Primary blue */
-  --primary-dark: #1C2331; /* Dark blue */
-  --secondary: #F9FAFB; /* Light gray background */
-  --accent: #E5E7EB; /* Border/divider color */
-  --text: #1F2937; /* Dark gray text */
-  --text-light: #6B7280; /* Light gray text */
-  --background: #FFFFFF; /* White background */
+@layer base {
+  :root {
+    --color-primary: 46, 90, 172;    /* #2E5AAC */
+    --color-primary-dark: 28, 35, 49; /* #1C2331 */
+    --color-secondary: 249, 250, 251; /* #F9FAFB */
+    --color-accent: 229, 231, 235;    /* #E5E7EB */
+    --color-text: 31, 41, 55;        /* #1F2937 */
+    --color-text-light: 107, 114, 128; /* #6B7280 */
+  }
+
+  body {
+    @apply bg-white text-text font-sans antialiased;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold text-primary-dark;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  /* Links */
+  a {
+    @apply text-primary hover:text-primary-dark transition-colors duration-200;
+  }
 }
 
-body {
-  @apply bg-white text-[var(--text)] font-sans antialiased;
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-dark transition-colors duration-200;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary hover:text-white transition-colors duration-200;
+  }
+
+  /* Container */
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Form elements */
+  input, textarea, select {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200;
+  }
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  @apply font-poppins font-bold text-[var(--primary-dark)];
-}
+@layer utilities {
+  /* Sections */
+  .section {
+    @apply py-16 md:py-24;
+  }
 
-h1 {
-  @apply text-4xl md:text-5xl lg:text-6xl;
-}
-
-h2 {
-  @apply text-3xl md:text-4xl;
-}
-
-h3 {
-  @apply text-2xl md:text-3xl;
-}
-
-/* Links */
-a {
-  @apply text-[var(--primary)] hover:text-[var(--primary-dark)] transition-colors duration-200;
-}
-
-/* Buttons */
-.btn-primary {
-  @apply bg-[var(--primary)] text-white px-6 py-3 rounded-lg font-medium hover:bg-[var(--primary-dark)] transition-colors duration-200;
-}
-
-.btn-outline {
-  @apply border border-[var(--primary)] text-[var(--primary)] px-6 py-3 rounded-lg font-medium hover:bg-[var(--primary)] hover:text-white transition-colors duration-200;
-}
-
-/* Sections */
-.section {
-  @apply py-16 md:py-24;
-}
-
-/* Container */
-.container {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-}
-
-/* Form elements */
-input, textarea, select {
-  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all duration-200;
-}
-
-/* Utilities */
-.text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#2E5AAC] to-[#1C2331];
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark;
+  }
 }
