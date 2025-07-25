@@ -135,7 +135,7 @@ a.secondary {
 
 .cta-wrapper {
   position: relative;
-  height: 72px; /* Adjust to your button height + margin */
+  height: 72px;
 }
 
 .cta-btn {
@@ -157,10 +157,12 @@ a.secondary {
   cursor: pointer;
   outline: none;
 }
+
 .cta-btn:hover {
   background: #0F172A;
   color: #E4E7EF;
 }
+
 .cta-btn.sticky {
   position: fixed;
   top: 10px;
@@ -170,6 +172,7 @@ a.secondary {
   opacity: 0.97;
   pointer-events: auto;
 }
+
 .sticky {
   position: fixed;
   top: 10px;
@@ -179,19 +182,6 @@ a.secondary {
   opacity: 0.97;
   pointer-events: auto;
 }
-@media (max-width: 600px) {
-  .cta-wrapper {
-    height: 56px;
-  }
-  .cta-btn, .cta-btn.sticky {
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-    top: 8px;
-    max-width: 95vw;
-    width: auto;
-  }
-}
-
 
 :root {
   --primary: #1C2331;
@@ -251,6 +241,18 @@ a.secondary {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+
+  .cta-wrapper {
+    height: 56px;
+  }
+  
+  .cta-btn, .cta-btn.sticky {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    top: 8px;
+    max-width: 95vw;
+    width: auto;
   }
 }
 
