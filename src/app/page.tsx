@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaUserTie, FaCogs, FaLaptopCode, FaRegBuilding, FaArrowRight } from "react-icons/fa";
-import StickyDiscoveryCallButton from "../../components/StickyDiscoveryCallButton";
+import StickyDiscoveryCallButton from "@/components/StickyDiscoveryCallButton";
 import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import PricingSection from "@/components/PricingSection";

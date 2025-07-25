@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { FaPhoneAlt } from 'react-icons/fa';
+import styles from './StickyButton.module.css';
 
 export default function StickyDiscoveryCallButton() {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,20 +16,20 @@ export default function StickyDiscoveryCallButton() {
       }
     };
 
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
   return (
-    <div className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+    <div className={`${styles.stickyButton} ${isVisible ? styles.visible : ''}`}>
       <a
         href="https://calendly.com/opsalphava/discovery-call"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#2E5AAC] text-white shadow-lg hover:bg-[#1C2331] transition-colors duration-200 group"
+        className={styles.button}
         aria-label="Book Discovery Call"
       >
-        <FaPhoneAlt className="w-5 h-5 md:w-6 md:h-6" />
+        <FaPhoneAlt className={styles.icon} />
         <span className="sr-only">Book Discovery Call</span>
       </a>
     </div>
