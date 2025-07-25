@@ -5,7 +5,6 @@ import StickyDiscoveryCallButton from "@/components/StickyDiscoveryCallButton";
 import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import PricingSection from "@/components/PricingSection";
-import VisualsSection from "@/components/VisualsSection";
 import Footer from "@/components/Footer";
 
 // Hero Section Component
@@ -163,7 +162,6 @@ export default function Home() {
         <ServicesOverview />
         <TestimonialsSection />
         <PricingSection />
-        <VisualsSection />
         <CTASection />
       </main>
       <Footer />
