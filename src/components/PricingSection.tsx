@@ -135,7 +135,7 @@ const PricingSection = () => {
               rel="noopener noreferrer"
               className={styles.ctaButton}
             >
-              Contact Us
+              Get Started
             </a>
           </div>
         </div>
