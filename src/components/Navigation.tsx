@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { FaBars, FaTimes, FaCalendarAlt } from 'react-icons/fa';
+import { FaBars, FaTimes, FaCalendarAlt, FaEnvelope } from 'react-icons/fa';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,8 +35,12 @@ const Navigation = () => {
       <div className="bg-[#1C2331] text-white text-sm py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <a href="mailto:opsalphava@gmail.com" className="hover:text-blue-300 transition-colors">
-              opsalphava@gmail.com
+            <a 
+              href="mailto:opsalphava@gmail.com" 
+              className="hover:text-blue-300 transition-colors"
+              aria-label="Email us"
+            >
+              <FaEnvelope className="h-5 w-5" />
             </a>
           </div>
           <div className="flex items-center space-x-4">
