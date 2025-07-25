@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaEnvelope, FaTiktok } from 'react-icons/fa';
 import styles from '../app/Footer.module.css';
 
 const Footer = () => {
@@ -16,14 +16,14 @@ const Footer = () => {
               <a href="https://www.facebook.com/share/1AxiMU462s/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebook className={styles.socialIcon} />
               </a>
-              <a href="https://www.instagram.com/opsalpha.va?igsh=MXB1ZzFncHB4bGNrNQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://www.instagram.com/opsalpha.va/?igsh=MXB1ZzFncHB4bGNrNQ%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram className={styles.socialIcon} />
+              </a>
+              <a href="https://www.tiktok.com/@opsalpha.va?_t=ZS-8yJeQbeYODy&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <FaTiktok className={styles.socialIcon} />
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className={styles.disabledLink}>
                 <FaLinkedin className={styles.socialIcon} />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className={styles.disabledLink}>
-                <FaTwitter className={styles.socialIcon} />
               </a>
               <a href="mailto:opsalphava@gmail.com" aria-label="Email">
                 <FaEnvelope className={styles.socialIcon} />

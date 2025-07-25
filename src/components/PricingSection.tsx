@@ -8,7 +8,6 @@ const PricingSection = () => {
     'Email & Calendar Management',
     'Data Entry & Reporting',
     'Research & Presentation Support',
-    '24/7 Support',
     'Custom Workflows'
   ];
 
@@ -137,9 +136,7 @@ const PricingSection = () => {
           </div>
         </div>
 
-        <div className={styles.note}>
-          <p>All plans come with a 7-day risk-free trial. No contracts, cancel anytime.</p>
-        </div>
+
       </div>
     </section>
   );
