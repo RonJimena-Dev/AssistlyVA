@@ -9,7 +9,7 @@ export default function Home() {
 
         {/* Logo centered above brand name, no background overlays/parallax */}
         <Image
-          src="/Logo.JPG"
+          src="/Logo.png"
           alt="OpsAlpha Logo"
           width={320}
           height={320}
