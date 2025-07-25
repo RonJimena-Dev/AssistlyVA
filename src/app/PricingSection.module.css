@@ -51,17 +51,11 @@
 }
 
 .startsAtLabel {
-  position: absolute;
-  top: 1rem;
-  right: -2rem;
-  background: #2E5AAC;
-  color: white;
-  padding: 0.25rem 2rem;
-  transform: rotate(45deg);
-  font-size: 0.75rem;
-  font-weight: 600;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  font-size: 0.9rem;
+  color: #64748B;
+  margin-bottom: -0.5rem;
+  text-align: center;
+  font-style: italic;
 }
 
 .pricingCard:hover {
@@ -108,7 +102,10 @@
 }
 
 .price {
-  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
 }
 
 .amount {

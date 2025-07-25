@@ -29,8 +29,11 @@ const PricingSection = () => {
             <div className={styles.planHeader}>
               <h3>Part Time</h3>
               <div className={styles.price}>
-                <span className={styles.amount}>$10</span>
-                <span className={styles.duration}>/hour</span>
+                <span className={styles.startsAtLabel}>Starts at</span>
+                <div className={styles.priceRow}>
+                  <span className={styles.amount}>$10</span>
+                  <span className={styles.duration}>/hour</span>
+                </div>
               </div>
               <p className={styles.description}>Perfect for growing businesses with variable needs</p>
             </div>
@@ -65,10 +68,13 @@ const PricingSection = () => {
             <div className={styles.planHeader}>
               <h3>Full Time</h3>
               <div className={styles.price}>
-                <span className={styles.amount}>$9</span>
-                <span className={styles.duration}>/hour</span>
+                <span className={styles.startsAtLabel}>Starts at</span>
+                <div className={styles.priceRow}>
+                  <span className={styles.amount}>$8</span>
+                  <span className={styles.duration}>/hour</span>
+                </div>
               </div>
-              <p className={styles.description}>Ideal for businesses with consistent support needs</p>
+              <p className={styles.description}>Ideal for established businesses with consistent needs</p>
             </div>
             <ul className={styles.featuresList}>
               {features.map((feature, index) => (
