@@ -110,7 +110,7 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how we can support your business goals with our professional services.
+            Let&apos;s discuss how we can support your business goals with our professional services.
           </p>
           <a
             href="https://calendly.com/opsalphava/discovery-call"

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaUserTie, FaUserCheck } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaUserTie, FaUserCheck } from 'react-icons/fa';
 
 export default function ContactPage() {
   const [activeTab, setActiveTab] = useState('client');
@@ -36,7 +36,7 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Get in touch with our team. We're here to help and answer any questions you might have.
+            Get in touch with our team. We&apos;re here to help and answer any questions you might have.
           </p>
         </div>
       </div>
@@ -261,7 +261,7 @@ export default function ContactPage() {
 
                       <div>
                         <label htmlFor="message" className="block text-sm font-medium text-[#1C2331] mb-1">
-                          Tell us about yourself and why you'd be a great fit *
+                          Tell us about yourself and why you&apos;d be a great fit *
                         </label>
                         <textarea
                           id="message"

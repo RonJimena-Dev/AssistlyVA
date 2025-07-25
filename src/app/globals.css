@@ -3,29 +3,66 @@
 @tailwind utilities;
 
 :root {
-  --primary: #181818; /* Black */
-  --secondary: #d6bfa7; /* Muted Beige/Light Brown */
-  --accent: #bca890; /* Slightly deeper beige for accents */
-  --background: #fff; /* White */
-  --foreground: #232323; /* Soft dark gray for text */
+  --primary: #2E5AAC; /* Primary blue */
+  --primary-dark: #1C2331; /* Dark blue */
+  --secondary: #F9FAFB; /* Light gray background */
+  --accent: #E5E7EB; /* Border/divider color */
+  --text: #1F2937; /* Dark gray text */
+  --text-light: #6B7280; /* Light gray text */
+  --background: #FFFFFF; /* White background */
 }
 
 body {
-  @apply bg-[var(--background)] text-[var(--foreground)] font-sans antialiased;
+  @apply bg-white text-[var(--text)] font-sans antialiased;
 }
 
-.logo-watermark-bg {
-  background-image: url('/logo.jpeg');
-  background-size: 60vw;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  filter: opacity(0.08);
-  z-index: 0;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-poppins font-bold text-[var(--primary-dark)];
 }
 
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+}
 
+h2 {
+  @apply text-3xl md:text-4xl;
+}
 
+h3 {
+  @apply text-2xl md:text-3xl;
+}
+
+/* Links */
 a {
-  @apply text-[var(--primary)] hover:underline;
+  @apply text-[var(--primary)] hover:text-[var(--primary-dark)] transition-colors duration-200;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-[var(--primary)] text-white px-6 py-3 rounded-lg font-medium hover:bg-[var(--primary-dark)] transition-colors duration-200;
+}
+
+.btn-outline {
+  @apply border border-[var(--primary)] text-[var(--primary)] px-6 py-3 rounded-lg font-medium hover:bg-[var(--primary)] hover:text-white transition-colors duration-200;
+}
+
+/* Sections */
+.section {
+  @apply py-16 md:py-24;
+}
+
+/* Container */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Form elements */
+input, textarea, select {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all duration-200;
+}
+
+/* Utilities */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#2E5AAC] to-[#1C2331];
 }
