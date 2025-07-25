@@ -67,7 +67,7 @@ const PricingSection = () => {
               <div className={styles.price}>
                 <div className={styles.priceContent}>
                   <div className={styles.startsAtLabel}>Starts at</div>
-                  <div className={styles.priceAmount}>$8<span className={styles.duration}>/hour</span></div>
+                  <div className={styles.priceAmount}>$9<span className={styles.duration}>/hour</span></div>
                 </div>
               </div>
               <p className={styles.description}>Ideal for established businesses with consistent needs</p>
