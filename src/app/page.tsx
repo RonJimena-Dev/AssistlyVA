@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaBolt, FaEnvelopeOpenText, FaCalendarCheck, FaChartLine, FaUserTie, FaCogs, FaLaptopCode, FaRegBuilding } from "react-icons/fa";
+import StickyDiscoveryCallButton from "./StickyDiscoveryCallButton";
 
 export default function Home() {
   return (
@@ -24,12 +25,8 @@ export default function Home() {
             Empowering Professionals. Elevating Businesses. Every Day.
           </p>
 
-          <a
-            href="#contact"
-            className="inline-block px-10 py-4 bg-[#1C2331] text-white text-xl font-bold rounded-full shadow-lg hover:bg-[#0F172A] hover:text-[#E4E7EF] border-2 border-[#3A4256] transition active:scale-95 animate-pop-in"
-          >
-            Book a Discovery Call
-          </a>
+          {/* Sticky Discovery Call Button */}
+          <StickyDiscoveryCallButton />
         </div>
       </section>
 
