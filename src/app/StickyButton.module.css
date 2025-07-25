@@ -1,0 +1,56 @@
+/* Sticky Button Styles */
+.ctaWrapper {
+  position: relative;
+  height: 72px;
+  width: 100%;
+  z-index: 50;
+}
+
+.ctaButton {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: #1C2331;
+  color: #fff;
+  border: 2px solid #3A4256;
+  border-radius: 999px;
+  box-shadow: 0 2px 12px 0 rgba(44, 54, 94, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  outline: none;
+}
+
+.ctaButton:hover {
+  background: #0F172A;
+  color: #E4E7EF;
+}
+
+.ctaButton.sticky {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  box-shadow: 0 8px 32px 0 rgba(46, 90, 172, 0.14), 0 1.5px 6px 0 rgba(28, 35, 49, 0.08);
+  opacity: 0.97;
+  pointer-events: auto;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .ctaWrapper {
+    height: 56px;
+  }
+  
+  .ctaButton,
+  .ctaButton.sticky {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    top: 8px;
+    max-width: 95vw;
+    width: auto;
+  }
+}

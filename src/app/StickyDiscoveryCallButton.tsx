@@ -1,37 +1,34 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-
-import styles from './page.module.css';
+import styles from './StickyButton.module.css';
 
 export default function StickyDiscoveryCallButton() {
-  const btnRef = useRef<HTMLButtonElement>(null);
-  const wrapperRef = useRef<HTMLDivElement>(null);
   const [isSticky, setIsSticky] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!btnRef.current || !wrapperRef.current) return;
-      const stickyOffset = wrapperRef.current.getBoundingClientRect().top + window.scrollY;
-      if (window.scrollY > stickyOffset) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
+      if (wrapperRef.current) {
+        const rect = wrapperRef.current.getBoundingClientRect();
+        setIsSticky(rect.top <= 0);
       }
     };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    // Initial check in case page loads with scroll position
+    handleScroll();
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className={styles['cta-wrapper']} ref={wrapperRef}>
-      <button
-        id="stickyBtn"
-        ref={btnRef}
-        className={styles['cta-btn'] + (isSticky ? ' ' + styles['sticky'] : '')}
+    <div className={styles.ctaWrapper} ref={wrapperRef}>
+      <button 
+        className={`${styles.ctaButton} ${isSticky ? styles.sticky : ''}`}
+        onClick={() => window.open('https://calendly.com/opsalpha/discovery-call', '_blank')}
       >
-        Book a Discovery Call
+        Book Discovery Call
       </button>
     </div>
   );
 }
-
