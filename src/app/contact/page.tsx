@@ -94,7 +94,7 @@ export default function ContactPage() {
                   }`}
                 >
                   <FaUserTie className="h-5 w-5" />
-                  <span>I'm a Client</span>
+                  <span>I&apos;m a Client</span>
                 </button>
                 <button
                   onClick={() => setActiveTab('va')}
@@ -105,7 +105,7 @@ export default function ContactPage() {
                   }`}
                 >
                   <FaUserCheck className="h-5 w-5" />
-                  <span>I'm a VA</span>
+                  <span>I&apos;m a VA</span>
                 </button>
               </div>
 
