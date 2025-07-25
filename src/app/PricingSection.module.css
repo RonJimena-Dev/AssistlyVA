@@ -47,7 +47,8 @@
   border: 1px solid #E4E7EF;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  margin-top: 20px;
+  overflow: visible;
 }
 
 .startsAtLabel {
@@ -85,6 +86,8 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  z-index: 1;
+  white-space: nowrap;
 }
 
 .planHeader {
