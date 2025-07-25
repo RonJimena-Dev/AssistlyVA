@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
+import styles from './page.module.css';
+
 export default function StickyDiscoveryCallButton() {
   const btnRef = useRef<HTMLButtonElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -21,11 +23,11 @@ export default function StickyDiscoveryCallButton() {
   }, []);
 
   return (
-    <div className="cta-wrapper" ref={wrapperRef}>
+    <div className={styles['cta-wrapper']} ref={wrapperRef}>
       <button
         id="stickyBtn"
         ref={btnRef}
-        className={`cta-btn${isSticky ? " sticky" : ""}`}
+        className={styles['cta-btn'] + (isSticky ? ' ' + styles['sticky'] : '')}
       >
         Book a Discovery Call
       </button>

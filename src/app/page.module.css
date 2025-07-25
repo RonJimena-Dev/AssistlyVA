@@ -170,6 +170,15 @@ a.secondary {
   opacity: 0.97;
   pointer-events: auto;
 }
+.sticky {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  box-shadow: 0 8px 32px 0 rgba(46,90,172,0.14), 0 1.5px 6px 0 rgba(28,35,49,0.08);
+  opacity: 0.97;
+  pointer-events: auto;
+}
 @media (max-width: 600px) {
   .cta-wrapper {
     height: 56px;
