@@ -1,14 +1,17 @@
 import Image from "next/image";
-import { FaBolt, FaEnvelopeOpenText, FaCalendarCheck, FaChartLine, FaUserTie, FaCogs, FaLaptopCode, FaRegBuilding } from "react-icons/fa";
+import { FaUserTie, FaCogs, FaLaptopCode, FaRegBuilding } from "react-icons/fa";
 import StickyDiscoveryCallButton from "./StickyDiscoveryCallButton";
+import AboutSection from "@/components/AboutSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import PricingSection from "@/components/PricingSection";
+import VisualsSection from "@/components/VisualsSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section with Parallax Logo */}
+      {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center min-h-[80vh] py-10 px-4 text-center" style={{ background: '#F7F5F2' }}>
-
-        {/* Logo centered above brand name, no background overlays/parallax */}
         <Image
           src="/Logo.png"
           alt="OpsAlpha Logo"
@@ -24,22 +27,24 @@ export default function Home() {
           <p className="text-lg md:text-xl font-semibold mb-8" style={{ color: '#8D7B5A', letterSpacing: '0.25em', textTransform: 'uppercase' }}>
             Empowering Professionals. Elevating Businesses. Every Day.
           </p>
-
-          {/* Sticky Discovery Call Button */}
           <StickyDiscoveryCallButton />
         </div>
       </section>
 
       {/* About Section */}
-      <section className="w-full max-w-3xl mx-auto py-12 px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1C2331] mb-4 animate-fade-in">About OpsAlpha</h2>
-        <p className="text-lg md:text-xl text-[#3A4256] mb-6 animate-slide-in-up">
-          OpsAlpha is a high-performance operations and virtual assistant agency built for founders, consultants, and business leaders. We provide executive-level support, Salesforce administration, and operational systems design — so you can scale with confidence.
-        </p>
-      </section>
+      <AboutSection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
+      {/* Visuals Section */}
+      <VisualsSection />
+
+      {/* Pricing Section */}
+      <PricingSection />
 
       {/* Services Section */}
-      <section className="w-full max-w-6xl mx-auto py-12 px-4">
+      <section id="services" className="w-full max-w-6xl mx-auto py-12 px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-[#1C2331] mb-8 text-center animate-fade-in">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Virtual Executive Assistance */}
@@ -49,104 +54,89 @@ export default function Home() {
             <p className="text-[#3A4256] text-sm">Inbox, calendar, travel, research & high-touch support for leaders who need leverage.</p>
           </div>
           {/* Salesforce Admin & Optimization */}
-          <div className="bg-white/90 rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-1 transition group animate-slide-in-up delay-100">
-            <FaCogs className="text-4xl text-[#2E5AAC] mb-3 group-hover:text-[#1C2331] transition" />
+          <div className="bg-white/90 rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-1 transition group animate-slide-in-up" style={{ animationDelay: '100ms' }}>
+            <FaCogs className="text-4xl text-[#1C2331] mb-3 group-hover:text-[#2E5AAC] transition" />
             <h3 className="text-xl font-semibold text-[#1C2331] mb-2">Salesforce Admin & Optimization</h3>
-            <p className="text-[#3A4256] text-sm">Certified Salesforce administration, automation, reporting & CRM optimization for your business.</p>
+            <p className="text-[#3A4256] text-sm">Customize, maintain, and optimize your Salesforce instance for maximum efficiency.</p>
           </div>
           {/* Project-Based Web Development */}
-          <div className="bg-white/90 rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-1 transition group animate-slide-in-up delay-200">
+          <div className="bg-white/90 rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-1 transition group animate-slide-in-up" style={{ animationDelay: '200ms' }}>
             <FaLaptopCode className="text-4xl text-[#1C2331] mb-3 group-hover:text-[#2E5AAC] transition" />
-            <h3 className="text-xl font-semibold text-[#1C2331] mb-2">Project-Based Web Development</h3>
-            <p className="text-[#3A4256] text-sm">Websites, dashboards, automations & integrations built for operational efficiency.</p>
+            <h3 className="text-xl font-semibold text-[#1C2331] mb-2">Web Development</h3>
+            <p className="text-[#3A4256] text-sm">Custom websites, landing pages, and web applications built to your specifications.</p>
           </div>
           {/* Admin & Back Office Solutions */}
-          <div className="bg-white/90 rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-1 transition group animate-slide-in-up delay-300">
-            <FaRegBuilding className="text-4xl text-[#2E5AAC] mb-3 group-hover:text-[#1C2331] transition" />
-            <h3 className="text-xl font-semibold text-[#1C2331] mb-2">Admin & Back Office Solutions</h3>
-            <p className="text-[#3A4256] text-sm">Billing, docs, HR, research, process & admin handled with precision and care.</p>
+          <div className="bg-white/90 rounded-2xl shadow-lg p-6 flex flex-col items-center hover:shadow-2xl hover:-translate-y-1 transition group animate-slide-in-up" style={{ animationDelay: '300ms' }}>
+            <FaRegBuilding className="text-4xl text-[#1C2331] mb-3 group-hover:text-[#2E5AAC] transition" />
+            <h3 className="text-xl font-semibold text-[#1C2331] mb-2">Admin & Back Office</h3>
+            <p className="text-[#3A4256] text-sm">Data entry, document management, and operational support to keep your business running smoothly.</p>
           </div>
         </div>
       </section>
 
       {/* Why OpsAlpha Section */}
-      <section className="w-full max-w-4xl mx-auto py-12 px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1C2331] mb-6 animate-fade-in">Why OpsAlpha?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white/80 rounded-xl shadow p-6 animate-slide-in-up">
-            <h4 className="text-lg font-bold text-[#2E5AAC] mb-2">Operator-level mindset, not task-takers</h4>
-            <p className="text-[#3A4256] text-sm">We think like owners and act with initiative—delivering outcomes, not just tasks.</p>
-          </div>
-          <div className="bg-white/80 rounded-xl shadow p-6 animate-slide-in-up delay-100">
-            <h4 className="text-lg font-bold text-[#2E5AAC] mb-2">Fluent in high-performance tools & platforms</h4>
-            <p className="text-[#3A4256] text-sm">From Salesforce to Notion, we’re power users who help you get the most from your stack.</p>
-          </div>
-          <div className="bg-white/80 rounded-xl shadow p-6 animate-slide-in-up delay-200">
-            <h4 className="text-lg font-bold text-[#2E5AAC] mb-2">Trusted by leaders across industries</h4>
-            <p className="text-[#3A4256] text-sm">Startups, consultants, and established businesses trust us to run their ops with excellence.</p>
-          </div>
-          <div className="bg-white/80 rounded-xl shadow p-6 animate-slide-in-up delay-300">
-            <h4 className="text-lg font-bold text-[#2E5AAC] mb-2">Systems-driven. Outcome-focused.</h4>
-            <p className="text-[#3A4256] text-sm">We design, document, and optimize systems—so you can scale with confidence.</p>
+      <section className="w-full bg-gray-50 py-16">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1C2331] mb-6 animate-fade-in">Why Choose OpsAlpha?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div className="bg-white rounded-xl shadow-md p-6 text-left animate-slide-in-up">
+              <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                <FaUserTie className="text-2xl text-[#2E5AAC]" />
+              </div>
+              <h4 className="text-lg font-bold text-[#1C2331] mb-2">Operator-Level Mindset</h4>
+              <p className="text-[#3A4256] text-sm">We think like owners and act with initiative—delivering outcomes, not just tasks.</p>
+            </div>
+            <div className="bg-white rounded-xl shadow-md p-6 text-left animate-slide-in-up" style={{ animationDelay: '100ms' }}>
+              <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                <FaCogs className="text-2xl text-[#2E5AAC]" />
+              </div>
+              <h4 className="text-lg font-bold text-[#1C2331] mb-2">Fluent in Modern Tools</h4>
+              <p className="text-[#3A4256] text-sm">From Salesforce to Notion, we're power users who help you get the most from your stack.</p>
+            </div>
+            <div className="bg-white rounded-xl shadow-md p-6 text-left animate-slide-in-up" style={{ animationDelay: '200ms' }}>
+              <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                <FaLaptopCode className="text-2xl text-[#2E5AAC]" />
+              </div>
+              <h4 className="text-lg font-bold text-[#1C2331] mb-2">Trusted by Leaders</h4>
+              <p className="text-[#3A4256] text-sm">Startups, consultants, and established businesses trust us to run their ops with excellence.</p>
+            </div>
+            <div className="bg-white rounded-xl shadow-md p-6 text-left animate-slide-in-up" style={{ animationDelay: '300ms' }}>
+              <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                <FaRegBuilding className="text-2xl text-[#2E5AAC]" />
+              </div>
+              <h4 className="text-lg font-bold text-[#1C2331] mb-2">Outcome-Focused</h4>
+              <p className="text-[#3A4256] text-sm">We design, document, and optimize systems—so you can scale with confidence.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Founder Insight (Optional) */}
-      <section className="w-full max-w-3xl mx-auto py-8 px-4 flex flex-col items-center text-center">
-        <div className="flex flex-col items-center gap-4 animate-fade-in">
-          <Image
-            src="/vercel.svg"
-            alt="Founder Headshot"
-            width={80}
-            height={80}
-            className="rounded-full border-2 border-[#2E5AAC] shadow-lg mb-2"
-          />
-          <blockquote className="italic text-[#3A4256] text-lg md:text-xl max-w-xl">
-            “OpsAlpha was built to empower leaders and teams to scale—without the operational drag. We’re your leverage, your operator, your edge.”
-          </blockquote>
-          <span className="font-bold text-[#1C2331] mt-2">Alex Founder, OpsAlpha VA</span>
+      {/* Final CTA Section */}
+      <section className="w-full bg-gradient-to-r from-[#1C2331] to-[#2E5AAC] py-20 px-4 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Scale Your Business?</h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Book a free discovery call to see how we can help streamline your operations and free up your time.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="https://calendly.com/opsalphava/discovery-call" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10 transition-colors duration-200"
+            >
+              Schedule Your Free Call
+            </a>
+            <a 
+              href="#contact" 
+              className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-base font-medium rounded-full text-white hover:bg-white hover:bg-opacity-10 md:py-4 md:text-lg md:px-10 transition-colors duration-200"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="w-full max-w-2xl mx-auto py-12 px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1C2331] mb-4 animate-fade-in">Ready to delegate with confidence?</h2>
-        <p className="text-lg text-[#3A4256] mb-8 animate-slide-in-up">Let’s build your operational advantage.</p>
-        <form className="flex flex-col gap-4 items-center bg-white rounded-xl shadow-lg p-8 mx-auto animate-slide-in-up border border-[#8D7B5A]" action="#" method="POST">
-          <input
-            type="text"
-            name="name"
-            required
-            placeholder="Your Name"
-            className="w-full max-w-xs px-4 py-2 rounded border border-[#8D7B5A] focus:border-[#2E5AAC] outline-none text-[#26221A] font-semibold placeholder-[#8D7B5A] bg-white shadow-sm"
-          />
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="Your Email"
-            className="w-full max-w-xs px-4 py-2 rounded border border-[#8D7B5A] focus:border-[#2E5AAC] outline-none text-[#26221A] font-semibold placeholder-[#8D7B5A] bg-white shadow-sm"
-          />
-          <textarea
-            name="message"
-            required
-            placeholder="How can we help you?"
-            className="w-full max-w-xs px-4 py-2 rounded border border-[#8D7B5A] focus:border-[#2E5AAC] outline-none text-[#26221A] font-semibold placeholder-[#8D7B5A] bg-white shadow-sm"
-            rows={4}
-          />
-          <button
-            type="submit"
-            className="mt-2 px-8 py-3 bg-[#2E5AAC] text-white font-bold rounded-full shadow hover:bg-[#1C2331] transition border border-[#8D7B5A]"
-          >
-            Send Message
-          </button>
-        </form>
-        <div className="mt-8 text-sm text-[#6B7280] animate-fade-in">
-          <p>“Great team—highly recommend for founders who want to scale!”</p>
-          <p className="mt-2">— Satisfied Client</p>
-        </div>
-      </section>
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

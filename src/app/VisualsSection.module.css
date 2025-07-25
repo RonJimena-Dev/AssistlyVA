@@ -1,0 +1,182 @@
+.visualsSection {
+  padding: 6rem 2rem;
+  background: #F8FAFC;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5rem;
+  color: #1C2331;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.sectionHeader p {
+  font-size: 1.25rem;
+  color: #64748B;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.visualGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.visualItem {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.visualItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.featured {
+  grid-column: span 12;
+  grid-row: span 2;
+  height: 500px;
+}
+
+.visualItem:not(.featured) {
+  grid-column: span 6;
+  height: 300px;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.visualItem:hover .image {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  padding: 2rem 1.5rem 1.5rem;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.overlay span {
+  display: block;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.ctaWrapper {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ctaWrapper p {
+  font-size: 1.25rem;
+  color: #1C2331;
+  margin-bottom: 1.5rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: #2E5AAC;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.ctaButton:hover {
+  background: transparent;
+  color: #2E5AAC;
+  border-color: #2E5AAC;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .visualItem:not(.featured) {
+    grid-column: span 6;
+    height: 250px;
+  }
+  
+  .featured {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .visualsSection {
+    padding: 4rem 1.5rem;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+  
+  .sectionHeader p {
+    font-size: 1.1rem;
+  }
+  
+  .visualGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .visualItem,
+  .visualItem:not(.featured) {
+    grid-column: span 1 !important;
+    height: 300px !important;
+  }
+  
+  .featured {
+    height: 300px !important;
+  }
+  
+  .ctaWrapper {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .ctaWrapper p {
+    font-size: 1.1rem;
+  }
+}
