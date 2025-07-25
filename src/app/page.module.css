@@ -135,7 +135,7 @@ a.secondary {
 
 .cta-wrapper {
   position: relative;
-  height: 80px; /* Adjust to your button height + margin */
+  height: 72px; /* Adjust to your button height + margin */
 }
 
 .cta-btn {
@@ -143,17 +143,23 @@ a.secondary {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   font-size: 1.25rem;
+  font-weight: bold;
   background: #1C2331;
   color: #fff;
-  border: none;
+  border: 2px solid #3A4256;
   border-radius: 999px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  z-index: 10;
-  font-weight: bold;
   box-shadow: 0 2px 12px 0 rgba(44,54,94,0.08);
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  z-index: 20;
+  opacity: 1;
+  cursor: pointer;
+  outline: none;
+}
+.cta-btn:hover {
+  background: #0F172A;
+  color: #E4E7EF;
 }
 .cta-btn.sticky {
   position: fixed;
@@ -161,11 +167,12 @@ a.secondary {
   left: 50%;
   transform: translateX(-50%) scale(0.95);
   box-shadow: 0 8px 32px 0 rgba(46,90,172,0.14), 0 1.5px 6px 0 rgba(28,35,49,0.08);
-  opacity: 0.95;
+  opacity: 0.97;
+  pointer-events: auto;
 }
 @media (max-width: 600px) {
   .cta-wrapper {
-    height: 60px;
+    height: 56px;
   }
   .cta-btn, .cta-btn.sticky {
     font-size: 1rem;
