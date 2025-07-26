@@ -9,8 +9,8 @@ export default function ServicesPage() {
     },
     {
       icon: <FaCogs className="text-5xl text-[#2E5AAC] mb-4" />,
-      title: 'Salesforce Admin & Optimization',
-      description: 'Certified Salesforce administration, automation, reporting & CRM optimization for your business.'
+      title: 'Process Automation & Operational Excellence',
+      description: 'We design, automate, and optimize internal systems to help businesses run smarter. From CRM workflows to executive reporting — we bring structure to scale.'
     },
     {
       icon: <FaLaptopCode className="text-5xl text-[#2E5AAC] mb-4" />,
