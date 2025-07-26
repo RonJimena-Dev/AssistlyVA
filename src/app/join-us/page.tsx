@@ -25,7 +25,7 @@ export default function JoinUsPage() {
   return (
     <section className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-24">
       <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl p-10 border border-gray-100">
-        <h1 className="text-4xl font-bold text-[#1C2331] mb-4 text-center font-poppins">Join OpsAlpha's Elite VA Team</h1>
+        <h1 className="text-4xl font-bold text-[#1C2331] mb-4 text-center font-poppins">Join OpsAlpha&apos;s Elite VA Team</h1>
         <p className="text-lg text-[#3A4256] mb-8 text-center">Ready to deliver white-glove service for top-tier clients? Apply below to start your journey with a luxury, growth-focused team.</p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

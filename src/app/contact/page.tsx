@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { FaEnvelope, FaMapMarkerAlt, FaUserTie, FaUserCheck } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function ContactPage() {
-  const [activeTab, setActiveTab] = useState('client');
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
