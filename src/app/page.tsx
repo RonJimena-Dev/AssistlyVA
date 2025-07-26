@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaUserTie, FaCogs, FaLaptopCode, FaRegBuilding, FaArrowRight } from "react-icons/fa";
+import { FaUserTie, FaCogs, FaLaptopCode, FaRegBuilding, FaArrowRight, FaCalendarAlt, FaPlane, FaUsers, FaTasks, FaFileAlt, FaSearch, FaChartLine, FaDatabase, FaRobot, FaDesktop, FaShieldAlt, FaRocket } from "react-icons/fa";
 import StickyDiscoveryCallButton from "@/components/StickyDiscoveryCallButton";
-import AboutSection from "@/components/AboutSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
@@ -57,67 +56,167 @@ const HeroSection = () => (
   </section>
 );
 
-// Services Overview Component
-const ServicesOverview = () => (
-  <section id="services" className="py-16 bg-white">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1C2331] mb-4">Our Services</h2>
-        <div className="w-20 h-1 bg-[#2E5AAC] mx-auto mb-8"></div>
-        <p className="text-xl text-[#3A4256] max-w-3xl mx-auto">
-          Comprehensive solutions designed to streamline your business operations and drive growth.
+// Combined Strategic Operations & Services Section
+const StrategicOperations = () => (
+  <section id="strategic-operations" className="relative py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+    {/* Decorative elements */}
+    <div className="absolute top-0 left-0 w-full h-full opacity-5">
+      <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center"></div>
+    </div>
+    
+    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Header with About content */}
+      <div className="text-center mb-20 max-w-4xl mx-auto">
+        <span className="inline-block px-4 py-2 mb-4 text-sm font-semibold text-[#2E5AAC] bg-[#2E5AAC]/10 rounded-full">
+          Your Strategic Advantage
+        </span>
+        <h2 className="text-4xl md:text-5xl font-bold text-[#1C2331] mb-6 leading-tight">
+          Your Strategic Operations Partner
+        </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-[#2E5AAC] to-[#4A90E2] mx-auto mb-8"></div>
+        <p className="text-xl text-[#3A4256] leading-relaxed mb-12">
+          OpsAlpha is a hand-picked team of trained virtual assistants helping founders, startups, and consultants scale without burnout. 
+          With systemized workflows, AI tools, and personalized service — we don't just assist, we optimize.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {[
-          {
-            icon: <FaUserTie className="text-5xl text-[#2E5AAC] mb-4" />,
-            title: 'Virtual Executive Assistance',
-            description: 'High-touch support for leaders who need leverage.'
-          },
-          {
-            icon: <FaCogs className="text-5xl text-[#2E5AAC] mb-4" />,
-            title: 'Salesforce Solutions',
-            description: 'Certified administration and optimization.'
-          },
-          {
-            icon: <FaLaptopCode className="text-5xl text-[#2E5AAC] mb-4" />,
-            title: 'Web Development',
-            description: 'Custom solutions for your digital presence.'
-          },
-          {
-            icon: <FaRegBuilding className="text-5xl text-[#2E5AAC] mb-4" />,
-            title: 'Back Office',
-            description: 'Comprehensive administrative support.'
-          }
-        ].map((service, index) => (
-          <div 
-            key={index}
-            className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
-          >
-            <div className="flex justify-center">
-              {service.icon}
-            </div>
-            <h3 className="text-xl font-semibold text-[#1C2331] mb-3">{service.title}</h3>
-            <p className="text-[#3A4256] text-sm mb-4">{service.description}</p>
-            <Link 
-              href="/services"
-              className="text-[#2E5AAC] text-sm font-medium hover:underline inline-flex items-center"
-            >
-              Learn more <FaArrowRight className="ml-1 h-3 w-3" />
-            </Link>
-          </div>
-        ))}
-      </div>
+      {/* Services Grid */}
+      <div className="relative">
+        <div className="absolute -inset-4 bg-gradient-to-r from-[#2E5AAC]/5 to-[#4A90E2]/5 rounded-2xl -z-10"></div>
+        
+        <div className="text-center mb-16">
+          <h3 className="text-3xl font-bold text-[#1C2331] mb-4">Our Premium Services</h3>
+          <p className="text-lg text-[#3A4256] max-w-2xl mx-auto">
+            We're not here to just assist — we optimize your backend so you can scale faster with less noise.
+          </p>
+        </div>
 
-      <div className="text-center mt-12">
-        <Link
-          href="/services"
-          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-[#2E5AAC] hover:bg-[#1C2331] transition-colors duration-200"
-        >
-          View All Services
-        </Link>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Service 1 */}
+          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="flex items-start mb-6">
+              <div className="bg-[#2E5AAC]/10 p-3 rounded-xl mr-5">
+                <FaUserTie className="text-2xl text-[#2E5AAC]" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-[#1C2331] mb-2">Virtual Executive Assistance</h3>
+                <p className="text-[#3A4256] mb-4">For founders, coaches, and consultants seeking premium support</p>
+              </div>
+            </div>
+            <ul className="space-y-3 pl-4">
+              {["Calendar & inbox management", "Travel coordination", "Client follow-ups", "Personal admin & task routing"].map((item, i) => (
+                <li key={i} className="flex items-center text-[#3A4256]">
+                  <svg className="h-5 w-5 text-[#2E5AAC] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Service 2 */}
+          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="flex items-start mb-6">
+              <div className="bg-[#2E5AAC]/10 p-3 rounded-xl mr-5">
+                <FaFileAlt className="text-2xl text-[#2E5AAC]" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-[#1C2331] mb-2">Back Office Support</h3>
+                <p className="text-[#3A4256] mb-4">For growing teams that need operational excellence</p>
+              </div>
+            </div>
+            <ul className="space-y-3 pl-4">
+              {["Data entry & formatting", "Research & reports", "SOP documentation", "Presentation prep"].map((item, i) => (
+                <li key={i} className="flex items-center text-[#3A4256]">
+                  <svg className="h-5 w-5 text-[#2E5AAC] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Service 3 */}
+          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="flex items-start mb-6">
+              <div className="bg-[#2E5AAC]/10 p-3 rounded-xl mr-5">
+                <FaCogs className="text-2xl text-[#2E5AAC]" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-[#1C2331] mb-2">Salesforce Admin Support</h3>
+                <p className="text-[#3A4256] mb-4">Certified expertise to streamline your CRM operations</p>
+              </div>
+            </div>
+            <ul className="space-y-3 pl-4">
+              {["Data cleanup & deduplication", "Workflow automation", "Dashboard/report setup", "Pipeline optimization"].map((item, i) => (
+                <li key={i} className="flex items-center text-[#3A4256]">
+                  <svg className="h-5 w-5 text-[#2E5AAC] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Service 4 */}
+          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div className="flex items-start mb-6">
+              <div className="bg-[#2E5AAC]/10 p-3 rounded-xl mr-5">
+                <FaLaptopCode className="text-2xl text-[#2E5AAC]" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-[#1C2331] mb-2">Web Development</h3>
+                <p className="text-[#3A4256] mb-4">For startups needing lean, fast, and effective digital solutions</p>
+              </div>
+            </div>
+            <ul className="space-y-3 pl-4">
+              {["Landing pages", "CMS setup (Webflow, WordPress)", "Small-scale custom solutions", "Website maintenance & updates"].map((item, i) => (
+                <li key={i} className="flex items-center text-[#3A4256]">
+                  <svg className="h-5 w-5 text-[#2E5AAC] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Stats or Trust Indicators */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {[
+            { icon: <FaShieldAlt className="text-3xl text-[#2E5AAC] mx-auto mb-3" />, value: "100%", label: "Confidential" },
+            { icon: <FaRocket className="text-3xl text-[#2E5AAC] mx-auto mb-3" />, value: "24/7", label: "Support" },
+            { icon: <FaUsers className="text-3xl text-[#2E5AAC] mx-auto mb-3" />, value: "50+", label: "Happy Clients" },
+            { icon: <FaChartLine className="text-3xl text-[#2E5AAC] mx-auto mb-3" />, value: "3x", label: "More Efficient" },
+          ].map((stat, i) => (
+            <div key={i} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="mb-2">{stat.icon}</div>
+              <div className="text-3xl font-bold text-[#1C2331]">{stat.value}</div>
+              <div className="text-[#3A4256]">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-20 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-[#1C2331] mb-6">Ready to Transform Your Operations?</h3>
+          <p className="text-xl text-[#3A4256] max-w-2xl mx-auto mb-8">
+            Schedule a free consultation and discover how we can help streamline your business.
+          </p>
+          <a
+            href="https://calendly.com/opsalphava/discovery-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-8 py-4 text-lg font-medium text-white bg-gradient-to-r from-[#2E5AAC] to-[#4A90E2] rounded-full hover:from-[#1C2331] hover:to-[#2E5AAC] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+          >
+            Book Your Free Strategy Session
+            <FaArrowRight className="ml-3 h-4 w-4" />
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -158,8 +257,7 @@ export default function Home() {
       <StickyDiscoveryCallButton />
       <main>
         <HeroSection />
-        <AboutSection />
-        <ServicesOverview />
+        <StrategicOperations />
         <TestimonialsSection />
         <PricingSection />
         <CTASection />
