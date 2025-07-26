@@ -155,49 +155,11 @@ export default function ContactPage() {
                       </div>
                       <div className="pt-2">
                         <button
-                  </div>
-
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-[#1C2331] mb-1">
-                      Service Interested In
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E5AAC] focus:border-transparent"
-                    >
-                      <option value="">Select a service</option>
-                      <option value="executive">Virtual Executive Assistance</option>
-                      <option value="salesforce">Salesforce Admin & Optimization</option>
-                      <option value="web">Project-Based Web Development</option>
-                      <option value="admin">Admin & Back Office Solutions</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-[#1C2331] mb-1">
-                      How can we help you? *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      required
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E5AAC] focus:border-transparent"
-                    ></textarea>
-                  </div>
-                  <div className="pt-2">
-                    <button
-                      type="submit"
-                      className="w-full bg-[#2E5AAC] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#1C2331] transition-colors duration-200"
-                    >
-                      Send Message
-                    </button>
+                          type="submit"
+                          className="w-full bg-[#2E5AAC] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#1C2331] transition-colors duration-200"
+                        >
+                          Send Message
+                        </button>
                   </div>
                 </form>
               </div>
