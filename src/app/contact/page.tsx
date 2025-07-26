@@ -94,7 +94,7 @@ export default function ContactPage() {
                   }`}
                 >
                   <FaUserTie className="h-5 w-5" />
-                  <span>I&apos;m a Client</span>
+                  <span>I&apos;m looking for a VA/Remote Services</span>
                 </button>
                 <button
                   onClick={() => setActiveTab('va')}
@@ -105,7 +105,7 @@ export default function ContactPage() {
                   }`}
                 >
                   <FaUserCheck className="h-5 w-5" />
-                  <span>I&apos;m a VA</span>
+                  <span>I want to join OpsAlpha&apos;s Elite VA Team</span>
                 </button>
               </div>
 
@@ -113,7 +113,8 @@ export default function ContactPage() {
               <div className="p-8">
                 {activeTab === 'client' ? (
                   <>
-                    <h3 className="text-2xl font-bold text-[#1C2331] mb-6">How can we help you?</h3>
+                    <h3 className="text-2xl font-bold text-[#1C2331] mb-6">Let&apos;s Elevate Your Operations</h3>
+                    <p className="text-[#3A4256] mb-8 text-lg">Fill out the form below and our Client Success team will match you with a world-class virtual assistant or remote operations expert. Experience luxury support, tailored to your needs.</p>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
@@ -193,7 +194,8 @@ export default function ContactPage() {
                   </>
                 ) : (
                   <>
-                    <h3 className="text-2xl font-bold text-[#1C2331] mb-6">Join Our Team</h3>
+                    <h3 className="text-2xl font-bold text-[#1C2331] mb-6">Apply to Join Our Elite VA Team</h3>
+<p className="text-[#3A4256] mb-8 text-lg">Ready to deliver white-glove service for top-tier clients? Submit your details below to be considered for a role with OpsAlpha—where professionalism, growth, and excellence are our standard.</p>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>

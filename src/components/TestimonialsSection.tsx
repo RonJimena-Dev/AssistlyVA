@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaQuoteLeft } from 'react-icons/fa';
 import styles from '../app/TestimonialsSection.module.css';
+import { FramerMotionWrapper } from './FramerMotionWrapper';
 
 const testimonials = [
   {
@@ -29,8 +30,9 @@ const TestimonialsSection = () => {
       <div className={styles.container}>
         <h2 className={styles.sectionTitle}>What Our Clients Say</h2>
         <div className={styles.testimonialsGrid}>
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className={styles.testimonialCard}>
+          {testimonials.map((testimonial, i) => (
+            <FramerMotionWrapper key={testimonial.id} index={i}>
+              <div className={styles.testimonialCard}>
               <div className={styles.quoteIcon}>
                 <FaQuoteLeft />
               </div>
@@ -40,6 +42,7 @@ const TestimonialsSection = () => {
                 <span className={styles.authorRole}>{testimonial.role}</span>
               </div>
             </div>
+            </FramerMotionWrapper>
           ))}
         </div>
       </div>

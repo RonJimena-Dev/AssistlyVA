@@ -1,7 +1,7 @@
 import { FaUserTie, FaCogs, FaLaptopCode, FaRegBuilding, FaCalendarAlt, FaChartBar, FaSearch } from 'react-icons/fa';
 
 export default function ServicesPage() {
-  const coreServices = [
+  const services = [
     {
       icon: <FaUserTie className="text-5xl text-[#2E5AAC] mb-4" />,
       title: 'Virtual Executive Assistance',
@@ -21,22 +21,19 @@ export default function ServicesPage() {
       icon: <FaRegBuilding className="text-5xl text-[#2E5AAC] mb-4" />,
       title: 'Admin & Back Office Solutions',
       description: 'Billing, docs, HR, research, process & admin handled with precision and care.'
-    }
-  ];
-
-  const supportServices = [
+    },
     {
-      icon: <FaCalendarAlt className="text-4xl text-[#2E5AAC] mb-4" />,
+      icon: <FaCalendarAlt className="text-5xl text-[#2E5AAC] mb-4" />,
       title: 'Calendar & Inbox Management',
       description: 'We tame your schedule and declutter your inbox, ensuring you never miss important communications or appointments.'
     },
     {
-      icon: <FaChartBar className="text-4xl text-[#2E5AAC] mb-4" />,
+      icon: <FaChartBar className="text-5xl text-[#2E5AAC] mb-4" />,
       title: 'Data Entry & Reporting',
       description: 'Accurate, on-time, and formatted the way you like it. We ensure your data is always organized and accessible.'
     },
     {
-      icon: <FaSearch className="text-4xl text-[#2E5AAC] mb-4" />,
+      icon: <FaSearch className="text-5xl text-[#2E5AAC] mb-4" />,
       title: 'Research & Presentation Support',
       description: 'Give us the topic, we&apos;ll deliver insights. Professional research and presentation support to make you shine.'
     }
@@ -55,53 +52,26 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* Core Services */}
+      {/* Unified Luxury Services Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-[#1C2331] mb-4">Core Services</h2>
-          <div className="w-20 h-1 bg-[#2E5AAC] mx-auto"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1C2331] mb-4">What We Offer</h2>
+          <div className="w-20 h-1 bg-[#2E5AAC] mx-auto mb-8"></div>
+          <p className="text-xl text-[#3A4256] max-w-3xl mx-auto">
+            Explore our full suite of core and professional services, delivered with a luxury, white-glove approach.
+          </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {coreServices.map((service, index) => (
-            <div 
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {services.map((service, index) => (
+            <div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-white rounded-2xl shadow-xl border border-gray-100 p-10 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
-              <div className="flex justify-center">
-                {service.icon}
-              </div>
+              <div className="flex justify-center mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold text-[#1C2331] mb-3">{service.title}</h3>
-              <p className="text-[#3A4256] text-sm">{service.description}</p>
+              <p className="text-[#3A4256] text-base mb-4">{service.description}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Support Services */}
-      <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#1C2331] mb-4">Professional Support Services</h2>
-            <p className="text-[#3A4256] max-w-3xl mx-auto">
-              Additional specialized services to support your business operations and executive needs.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {supportServices.map((service, index) => (
-              <div 
-                key={index}
-                className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-all duration-300 border-l-4 border-[#2E5AAC]"
-              >
-                <div className="flex justify-center mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-[#1C2331] mb-3 text-center">{service.title}</h3>
-                <p className="text-[#3A4256] text-sm text-center">{service.description}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

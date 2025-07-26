@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaCheckCircle, FaClock, FaStar } from 'react-icons/fa';
 import styles from '../app/PricingSection.module.css';
+import { FramerMotionWrapper } from './FramerMotionWrapper';
 
 const PricingSection = () => {
   const features = [
@@ -21,7 +22,8 @@ const PricingSection = () => {
 
         <div className={styles.pricingGrid}>
           {/* Part Time Plan */}
-          <div className={styles.pricingCard}>
+          <FramerMotionWrapper index={0}>
+            <div className={styles.pricingCard}>
             <div className={styles.popularBadge}>
               <FaStar /> Most Flexible
             </div>
@@ -56,9 +58,11 @@ const PricingSection = () => {
               Get Started
             </a>
           </div>
+          </FramerMotionWrapper>
 
           {/* Full Time Plan */}
-          <div className={`${styles.pricingCard} ${styles.featured}`}>
+          <FramerMotionWrapper index={1}>
+            <div className={`${styles.pricingCard} ${styles.featured}`}>
             <div className={styles.popularBadge}>
               <FaStar /> Best Value
             </div>
@@ -93,9 +97,11 @@ const PricingSection = () => {
               Get Started
             </a>
           </div>
+          </FramerMotionWrapper>
 
           {/* Custom Plan */}
-          <div className={styles.pricingCard}>
+          <FramerMotionWrapper index={2}>
+            <div className={styles.pricingCard}>
             <div className={styles.planHeader}>
               <h3>Custom Solution</h3>
               <div className={styles.price}>
@@ -138,6 +144,7 @@ const PricingSection = () => {
               Get Started
             </a>
           </div>
+          </FramerMotionWrapper>
         </div>
 
 

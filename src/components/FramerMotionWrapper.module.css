@@ -1,0 +1,13 @@
+.shine {
+  background: linear-gradient(90deg, rgba(46,90,172,0.04) 0%, rgba(74,144,226,0.10) 50%, rgba(46,90,172,0.04) 100%);
+  background-size: 200% 100%;
+  animation: shine-move 2s linear infinite;
+}
+@keyframes shine-move {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

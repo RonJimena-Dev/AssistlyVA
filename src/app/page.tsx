@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaUserTie, FaCogs, FaLaptopCode, FaRegBuilding, FaArrowRight, FaCalendarAlt, FaPlane, FaUsers, FaTasks, FaFileAlt, FaSearch, FaChartLine, FaDatabase, FaRobot, FaDesktop, FaShieldAlt, FaRocket } from "react-icons/fa";
+import { FaUserTie, FaCogs, FaLaptopCode, FaArrowRight, FaUsers, FaFileAlt, FaChartLine, FaShieldAlt, FaRocket, FaStar, FaCheckCircle, FaClock } from "react-icons/fa";
 import StickyDiscoveryCallButton from "@/components/StickyDiscoveryCallButton";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import PricingSection from "@/components/PricingSection";
 import Footer from "@/components/Footer";
+import { FramerMotionWrapper } from "@/components/FramerMotionWrapper";
 
 // Hero Section Component
 const HeroSection = () => (
@@ -76,7 +76,7 @@ const StrategicOperations = () => (
         <div className="w-24 h-1 bg-gradient-to-r from-[#2E5AAC] to-[#4A90E2] mx-auto mb-8"></div>
         <p className="text-xl text-[#3A4256] leading-relaxed mb-12">
           OpsAlpha is a hand-picked team of trained virtual assistants helping founders, startups, and consultants scale without burnout. 
-          With systemized workflows, AI tools, and personalized service — we don't just assist, we optimize.
+          With systemized workflows, AI tools, and personalized service — we don&apos;t just assist, we optimize.
         </p>
       </div>
 
@@ -87,102 +87,110 @@ const StrategicOperations = () => (
         <div className="text-center mb-16">
           <h3 className="text-3xl font-bold text-[#1C2331] mb-4">Our Premium Services</h3>
           <p className="text-lg text-[#3A4256] max-w-2xl mx-auto">
-            We're not here to just assist — we optimize your backend so you can scale faster with less noise.
+            We&apos;re not here to just assist — we optimize your backend so you can scale faster with less noise.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Service 1 */}
-          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-            <div className="flex items-start mb-6">
-              <div className="bg-[#2E5AAC]/10 p-3 rounded-xl mr-5">
-                <FaUserTie className="text-2xl text-[#2E5AAC]" />
+          <FramerMotionWrapper index={0}>
+            <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="flex items-start mb-6">
+                <div className="bg-[#2E5AAC]/10 p-3 rounded-xl mr-5">
+                  <FaUserTie className="text-2xl text-[#2E5AAC]" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#1C2331] mb-2">Virtual Executive Assistance</h3>
+                  <p className="text-[#3A4256] mb-4">For founders, coaches, and consultants seeking premium support</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#1C2331] mb-2">Virtual Executive Assistance</h3>
-                <p className="text-[#3A4256] mb-4">For founders, coaches, and consultants seeking premium support</p>
-              </div>
+              <ul className="space-y-3 pl-4">
+                {["Calendar & inbox management", "Travel coordination", "Client follow-ups", "Personal admin & task routing"].map((item, i) => (
+                  <li key={i} className="flex items-center text-[#3A4256]">
+                    <svg className="h-5 w-5 text-[#2E5AAC] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="space-y-3 pl-4">
-              {["Calendar & inbox management", "Travel coordination", "Client follow-ups", "Personal admin & task routing"].map((item, i) => (
-                <li key={i} className="flex items-center text-[#3A4256]">
-                  <svg className="h-5 w-5 text-[#2E5AAC] mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          </FramerMotionWrapper>
 
           {/* Service 2 */}
-          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-            <div className="flex items-start mb-6">
-              <div className="bg-[#2E5AAC]/10 p-3 rounded-xl mr-5">
-                <FaFileAlt className="text-2xl text-[#2E5AAC]" />
+          <FramerMotionWrapper index={1}>
+            <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="flex items-start mb-6">
+                <div className="bg-[#2E5AAC]/10 p-3 rounded-xl mr-5">
+                  <FaFileAlt className="text-2xl text-[#2E5AAC]" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#1C2331] mb-2">Back Office Support</h3>
+                  <p className="text-[#3A4256] mb-4">For growing teams that need operational excellence</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#1C2331] mb-2">Back Office Support</h3>
-                <p className="text-[#3A4256] mb-4">For growing teams that need operational excellence</p>
-              </div>
+              <ul className="space-y-3 pl-4">
+                {["Data entry & formatting", "Research & reports", "SOP documentation", "Presentation prep"].map((item, i) => (
+                  <li key={i} className="flex items-center text-[#3A4256]">
+                    <svg className="h-5 w-5 text-[#2E5AAC] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="space-y-3 pl-4">
-              {["Data entry & formatting", "Research & reports", "SOP documentation", "Presentation prep"].map((item, i) => (
-                <li key={i} className="flex items-center text-[#3A4256]">
-                  <svg className="h-5 w-5 text-[#2E5AAC] mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          </FramerMotionWrapper>
 
           {/* Service 3 */}
-          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-            <div className="flex items-start mb-6">
-              <div className="bg-[#2E5AAC]/10 p-3 rounded-xl mr-5">
-                <FaCogs className="text-2xl text-[#2E5AAC]" />
+          <FramerMotionWrapper index={2}>
+            <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="flex items-start mb-6">
+                <div className="bg-[#2E5AAC]/10 p-3 rounded-xl mr-5">
+                  <FaCogs className="text-2xl text-[#2E5AAC]" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#1C2331] mb-2">Salesforce Admin Support</h3>
+                  <p className="text-[#3A4256] mb-4">Certified expertise to streamline your CRM operations</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#1C2331] mb-2">Salesforce Admin Support</h3>
-                <p className="text-[#3A4256] mb-4">Certified expertise to streamline your CRM operations</p>
-              </div>
+              <ul className="space-y-3 pl-4">
+                {["Data cleanup & deduplication", "Workflow automation", "Dashboard/report setup", "Pipeline optimization"].map((item, i) => (
+                  <li key={i} className="flex items-center text-[#3A4256]">
+                    <svg className="h-5 w-5 text-[#2E5AAC] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="space-y-3 pl-4">
-              {["Data cleanup & deduplication", "Workflow automation", "Dashboard/report setup", "Pipeline optimization"].map((item, i) => (
-                <li key={i} className="flex items-center text-[#3A4256]">
-                  <svg className="h-5 w-5 text-[#2E5AAC] mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          </FramerMotionWrapper>
 
           {/* Service 4 */}
-          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-            <div className="flex items-start mb-6">
-              <div className="bg-[#2E5AAC]/10 p-3 rounded-xl mr-5">
-                <FaLaptopCode className="text-2xl text-[#2E5AAC]" />
+          <FramerMotionWrapper index={3}>
+            <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="flex items-start mb-6">
+                <div className="bg-[#2E5AAC]/10 p-3 rounded-xl mr-5">
+                  <FaLaptopCode className="text-2xl text-[#2E5AAC]" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#1C2331] mb-2">Web Development</h3>
+                  <p className="text-[#3A4256] mb-4">For startups needing lean, fast, and effective digital solutions</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#1C2331] mb-2">Web Development</h3>
-                <p className="text-[#3A4256] mb-4">For startups needing lean, fast, and effective digital solutions</p>
-              </div>
+              <ul className="space-y-3 pl-4">
+                {["Landing pages", "CMS setup (Webflow, WordPress)", "Small-scale custom solutions", "Website maintenance & updates"].map((item, i) => (
+                  <li key={i} className="flex items-center text-[#3A4256]">
+                    <svg className="h-5 w-5 text-[#2E5AAC] mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="space-y-3 pl-4">
-              {["Landing pages", "CMS setup (Webflow, WordPress)", "Small-scale custom solutions", "Website maintenance & updates"].map((item, i) => (
-                <li key={i} className="flex items-center text-[#3A4256]">
-                  <svg className="h-5 w-5 text-[#2E5AAC] mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          </FramerMotionWrapper>
         </div>
 
         {/* Stats or Trust Indicators */}
@@ -199,6 +207,67 @@ const StrategicOperations = () => (
               <div className="text-[#3A4256]">{stat.label}</div>
             </div>
           ))}
+        </div>
+
+        {/* Pricing Integration */}
+        <div className="mt-24">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-bold text-[#1C2331] mb-4">Our Plans & Investment</h3>
+            <p className="text-lg text-[#3A4256] max-w-2xl mx-auto">
+              Simple, transparent pricing for every stage of your growth.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Part Time Plan */}
+            <div className="relative bg-white rounded-2xl p-8 shadow-xl border border-gray-100 flex flex-col items-center hover:shadow-2xl transition-all duration-300">
+              <div className="absolute -top-5 right-6 bg-[#2E5AAC] text-white px-4 py-1 rounded-full text-xs font-semibold flex items-center gap-2 shadow-md"><FaStar /> Most Flexible</div>
+              <div className="text-center mb-6">
+                <h4 className="text-xl font-bold text-[#1C2331] mb-1">Part Time</h4>
+                <div className="text-3xl font-bold text-[#2E5AAC] mb-1">$10<span className="text-base font-normal text-[#64748B]">/hour</span></div>
+                <div className="text-sm text-[#64748B] mb-2">Starts at</div>
+                <p className="text-[#3A4256] mb-3">Perfect for growing businesses with variable needs</p>
+              </div>
+              <ul className="mb-8 w-full space-y-2">
+                {['Dedicated Virtual Assistant','Email & Calendar Management','Data Entry & Reporting','Research & Presentation Support','Custom Workflows'].map((feature, i) => (
+                  <li key={i} className="flex items-center text-[#3A4256]"><FaCheckCircle className="text-[#2E5AAC] mr-2" />{feature}</li>
+                ))}
+                <li className="flex items-center text-[#3A4256]"><FaClock className="text-[#2E5AAC] mr-2" />Minimum 20 hours/month</li>
+              </ul>
+              <a href="https://calendly.com/opsalphava/discovery-call" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-[#2E5AAC] to-[#4A90E2] text-white font-semibold shadow-md hover:from-[#1C2331] hover:to-[#2E5AAC] transition-all duration-300">Get Started</a>
+            </div>
+            {/* Full Time Plan */}
+            <div className="relative bg-white rounded-2xl p-8 shadow-xl border-2 border-[#2E5AAC] flex flex-col items-center scale-105 z-10 hover:shadow-2xl transition-all duration-300">
+              <div className="absolute -top-5 right-6 bg-[#2E5AAC] text-white px-4 py-1 rounded-full text-xs font-semibold flex items-center gap-2 shadow-md"><FaStar /> Best Value</div>
+              <div className="text-center mb-6">
+                <h4 className="text-xl font-bold text-[#1C2331] mb-1">Full Time</h4>
+                <div className="text-3xl font-bold text-[#2E5AAC] mb-1">$9<span className="text-base font-normal text-[#64748B]">/hour</span></div>
+                <div className="text-sm text-[#64748B] mb-2">Starts at</div>
+                <p className="text-[#3A4256] mb-3">Ideal for established businesses with consistent needs</p>
+              </div>
+              <ul className="mb-8 w-full space-y-2">
+                {['Dedicated Virtual Assistant','Email & Calendar Management','Data Entry & Reporting','Research & Presentation Support','Custom Workflows'].map((feature, i) => (
+                  <li key={i} className="flex items-center text-[#3A4256]"><FaCheckCircle className="text-[#2E5AAC] mr-2" />{feature}</li>
+                ))}
+                <li className="flex items-center text-[#3A4256]"><FaClock className="text-[#2E5AAC] mr-2" />160+ hours/month</li>
+              </ul>
+              <a href="https://calendly.com/opsalphava/discovery-call" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-[#2E5AAC] to-[#4A90E2] text-white font-semibold shadow-md hover:from-[#1C2331] hover:to-[#2E5AAC] transition-all duration-300">Get Started</a>
+            </div>
+            {/* Custom Plan */}
+            <div className="relative bg-white rounded-2xl p-8 shadow-xl border border-gray-100 flex flex-col items-center hover:shadow-2xl transition-all duration-300">
+              <div className="text-center mb-6">
+                <h4 className="text-xl font-bold text-[#1C2331] mb-1">Custom Solution</h4>
+                <div className="text-3xl font-bold text-[#2E5AAC] mb-1">Contact Us</div>
+                <div className="text-sm text-[#64748B] mb-2">Tailored for unique needs</div>
+                <p className="text-[#3A4256] mb-3">Let&apos;s build a bespoke plan for your business</p>
+              </div>
+              <ul className="mb-8 w-full space-y-2">
+                {['All features from Full Time','Specialized workflow automation','Industry-specific support','Advanced analytics & reporting'].map((feature, i) => (
+                  <li key={i} className="flex items-center text-[#3A4256]"><FaCheckCircle className="text-[#2E5AAC] mr-2" />{feature}</li>
+                ))}
+              </ul>
+              <a href="https://calendly.com/opsalphava/discovery-call" target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-[#2E5AAC] to-[#4A90E2] text-white font-semibold shadow-md hover:from-[#1C2331] hover:to-[#2E5AAC] transition-all duration-300">Request Custom Quote</a>
+            </div>
+          </div>
         </div>
 
         {/* CTA */}
@@ -259,7 +328,6 @@ export default function Home() {
         <HeroSection />
         <StrategicOperations />
         <TestimonialsSection />
-        <PricingSection />
         <CTASection />
       </main>
       <Footer />
