@@ -30,6 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable} scroll-smooth`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      </head>
       <body className="font-sans bg-gray-50">
         <Navigation />
         <main className="min-h-screen">
