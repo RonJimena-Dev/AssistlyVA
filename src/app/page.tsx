@@ -210,7 +210,7 @@ const StrategicOperations = () => (
         </div>
 
         {/* Pricing Integration */}
-        <div className="mt-24">
+        <div id="pricing" className="mt-24">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold text-[#1C2331] mb-4">Our Plans & Investment</h3>
             <p className="text-lg text-[#3A4256] max-w-2xl mx-auto">

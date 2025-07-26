@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope, FaTiktok } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope, FaTiktok, FaMapMarkerAlt } from 'react-icons/fa';
 import styles from '../app/Footer.module.css';
 
 const Footer = () => {
@@ -35,10 +35,9 @@ const Footer = () => {
             <div className={styles.linkColumn}>
               <h4>Company</h4>
               <ul>
-                <li><a href="#about">About Us</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#">Careers</a></li>
+                <li><a href="/join-us">Careers</a></li>
               </ul>
             </div>
             
@@ -63,7 +62,23 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className={styles.newsletter}>
+          <div className={styles.linkColumn}>
+  <h4>Contact</h4>
+  <ul style={{ marginTop: '1em' }}>
+  <li style={{ display: 'flex', alignItems: 'center', gap: '0.75em', marginBottom: '1.1em' }}>
+    <FaEnvelope style={{ color: '#2E5AAC' }} />
+    <span style={{ color: '#F5F7FA', opacity: 0.9 }}>opsalphava@gmail.com</span>
+  </li>
+  <li style={{ display: 'flex', alignItems: 'center', gap: '0.75em', marginBottom: '0.8em' }}>
+    <FaMapMarkerAlt style={{ color: '#2E5AAC' }} />
+    <span style={{ color: '#F5F7FA', opacity: 0.9 }}>Manila, Philippines</span>
+  </li>
+  <li style={{ color: '#B0B5C3', fontStyle: 'italic', fontSize: '0.95em', marginBottom: '1em' }}>Serving clients worldwide</li>
+  <li style={{ color: '#F5F7FA', opacity: 0.9, marginBottom: '0.8em' }}>Mon-Fri: 9:00 AM - 6:00 PM (PHT)</li>
+  <li style={{ color: '#B0B5C3', fontStyle: 'italic', fontSize: '0.95em' }}>Weekends: By appointment</li>
+</ul>
+</div>
+<div className={styles.newsletter}>
             <h4>Stay Updated</h4>
             <p>Subscribe to our newsletter for tips and updates.</p>
             <form className={styles.newsletterForm}>

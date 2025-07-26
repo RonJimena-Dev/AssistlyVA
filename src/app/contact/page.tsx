@@ -34,7 +34,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-[#1C2331] to-[#2E5AAC] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Looking for a VA?</h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             Get in touch with our team. We&apos;re here to help and answer any questions you might have.
           </p>
@@ -45,41 +45,7 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Information */}
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-xl shadow-lg p-8 h-full">
-              <h2 className="text-2xl font-bold text-[#1C2331] mb-6">Get in Touch</h2>
-              
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-blue-50 p-3 rounded-lg">
-                    <FaEnvelope className="h-6 w-6 text-[#2E5AAC]" />
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-[#1C2331]">Email Us</h3>
-                    <p className="mt-1 text-[#3A4256]">opsalphava@gmail.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 bg-blue-50 p-3 rounded-lg">
-                    <FaMapMarkerAlt className="h-6 w-6 text-[#2E5AAC]" />
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-[#1C2331]">Location</h3>
-                    <p className="mt-1 text-[#3A4256]">Manila, Philippines</p>
-                    <p className="text-sm text-gray-500">Serving clients worldwide</p>
-                  </div>
-                </div>
-
-                <div className="pt-4 border-t border-gray-200">
-                  <h3 className="text-lg font-medium text-[#1C2331] mb-3">Business Hours</h3>
-                  <p className="text-[#3A4256]">Monday - Friday: 9:00 AM - 6:00 PM (PHT)</p>
-                  <p className="text-sm text-gray-500 mt-1">Weekends: Available by appointment</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
