@@ -27,6 +27,7 @@ const Navigation = () => {
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
     { name: 'Contact Us', path: '/contact' },
+    { name: 'Join Us', path: '/join-us' }, // Luxury tab for VA applicants
   ];
 
   return (

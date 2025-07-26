@@ -83,38 +83,10 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              {/* Tabs */}
-              <div className="flex border-b border-gray-200">
-                <button
-                  onClick={() => setActiveTab('client')}
-                  className={`flex-1 py-4 px-6 text-center font-medium flex items-center justify-center space-x-2 ${
-                    activeTab === 'client'
-                      ? 'text-[#2E5AAC] border-b-2 border-[#2E5AAC]'
-                      : 'text-gray-500 hover:text-[#1C2331]'
-                  }`}
-                >
-                  <FaUserTie className="h-5 w-5" />
-                  <span>I&apos;m looking for a VA/Remote Services</span>
-                </button>
-                <button
-                  onClick={() => setActiveTab('va')}
-                  className={`flex-1 py-4 px-6 text-center font-medium flex items-center justify-center space-x-2 ${
-                    activeTab === 'va'
-                      ? 'text-[#2E5AAC] border-b-2 border-[#2E5AAC]'
-                      : 'text-gray-500 hover:text-[#1C2331]'
-                  }`}
-                >
-                  <FaUserCheck className="h-5 w-5" />
-                  <span>I want to join OpsAlpha&apos;s Elite VA Team</span>
-                </button>
-              </div>
-
               {/* Form Content */}
               <div className="p-8">
-                {activeTab === 'client' ? (
-                  <>
-                    <h3 className="text-2xl font-bold text-[#1C2331] mb-6">Let&apos;s Elevate Your Operations</h3>
-                    <p className="text-[#3A4256] mb-8 text-lg">Fill out the form below and our Client Success team will match you with a world-class virtual assistant or remote operations expert. Experience luxury support, tailored to your needs.</p>
+                <h3 className="text-2xl font-bold text-[#1C2331] mb-6">Let&apos;s Elevate Your Operations</h3>
+                <p className="text-[#3A4256] mb-8 text-lg">Fill out the form below and our Client Success team will match you with a world-class virtual assistant or remote operations expert. Experience luxury support, tailored to your needs.</p>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
@@ -181,112 +153,53 @@ export default function ContactPage() {
                           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E5AAC] focus:border-transparent"
                         ></textarea>
                       </div>
-
                       <div className="pt-2">
                         <button
-                          type="submit"
-                          className="w-full bg-[#2E5AAC] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#1C2331] transition-colors duration-200"
-                        >
-                          Send Message
-                        </button>
-                      </div>
-                    </form>
-                  </>
-                ) : (
-                  <>
-                    <h3 className="text-2xl font-bold text-[#1C2331] mb-6">Apply to Join Our Elite VA Team</h3>
-<p className="text-[#3A4256] mb-8 text-lg">Ready to deliver white-glove service for top-tier clients? Submit your details below to be considered for a role with OpsAlpha—where professionalism, growth, and excellence are our standard.</p>
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                          <label htmlFor="name" className="block text-sm font-medium text-[#1C2331] mb-1">
-                            Full Name *
-                          </label>
-                          <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            value={formData.name}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E5AAC] focus:border-transparent"
-                          />
-                        </div>
-                        <div>
-                          <label htmlFor="email" className="block text-sm font-medium text-[#1C2331] mb-1">
-                            Email Address *
-                          </label>
-                          <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E5AAC] focus:border-transparent"
-                          />
-                        </div>
-                      </div>
+                  </div>
 
-                      <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-[#1C2331] mb-1">
-                          Phone Number
-                        </label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E5AAC] focus:border-transparent"
-                        />
-                      </div>
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-[#1C2331] mb-1">
+                      Service Interested In
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E5AAC] focus:border-transparent"
+                    >
+                      <option value="">Select a service</option>
+                      <option value="executive">Virtual Executive Assistance</option>
+                      <option value="salesforce">Salesforce Admin & Optimization</option>
+                      <option value="web">Project-Based Web Development</option>
+                      <option value="admin">Admin & Back Office Solutions</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
 
-                      <div>
-                        <label htmlFor="experience" className="block text-sm font-medium text-[#1C2331] mb-1">
-                          Experience Level *
-                        </label>
-                        <select
-                          id="experience"
-                          name="experience"
-                          required
-                          value={formData.experience}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E5AAC] focus:border-transparent"
-                        >
-                          <option value="">Select experience level</option>
-                          <option value="entry">Entry Level (0-1 years)</option>
-                          <option value="mid">Mid Level (2-4 years)</option>
-                          <option value="senior">Senior Level (5+ years)</option>
-                        </select>
-                      </div>
-
-                      <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-[#1C2331] mb-1">
-                          Tell us about yourself and why you&apos;d be a great fit *
-                        </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          rows={4}
-                          required
-                          value={formData.message}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E5AAC] focus:border-transparent"
-                        ></textarea>
-                      </div>
-
-                      <div className="pt-2">
-                        <button
-                          type="submit"
-                          className="w-full bg-[#2E5AAC] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#1C2331] transition-colors duration-200"
-                        >
-                          Submit Application
-                        </button>
-                      </div>
-                    </form>
-                  </>
-                )}
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-[#1C2331] mb-1">
+                      How can we help you? *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      required
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2E5AAC] focus:border-transparent"
+                    ></textarea>
+                  </div>
+                  <div className="pt-2">
+                    <button
+                      type="submit"
+                      className="w-full bg-[#2E5AAC] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#1C2331] transition-colors duration-200"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
