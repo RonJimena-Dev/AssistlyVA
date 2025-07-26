@@ -150,8 +150,8 @@ const StrategicOperations = () => (
                   <FaCogs className="text-2xl text-[#2E5AAC]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#1C2331] mb-2">Salesforce Admin Support</h3>
-                  <p className="text-[#3A4256] mb-4">Certified expertise to streamline your CRM operations</p>
+                  <h3 className="text-xl font-bold text-[#1C2331] mb-2">Process Automation & Operational Excellence</h3>
+                  <p className="text-[#3A4256] mb-4">We design, automate, and optimize internal systems to help businesses run smarter. From CRM workflows to executive reporting — we bring structure to scale.</p>
                 </div>
               </div>
               <ul className="space-y-3 pl-4">
